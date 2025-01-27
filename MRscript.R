@@ -230,7 +230,7 @@ for (folder in folders) {
   n_snps   <- NA_integer_
   ivw_se   <- NA_real_
   ivw_pval <- NA_real_
-  ivw_beta <- NA_real_  # Initialize beta as NA_real_
+  ivw_beta <- NA_real_
   
   if (length(ivw_line_idx) > 0) {
     parsed_line <- FALSE
@@ -246,7 +246,7 @@ for (folder in folders) {
       
       if (length(splitted) >= 5) {
         n_snps   <- as.integer(splitted[2])
-        ivw_beta <- as.numeric(splitted[3])  # Extract beta from the 3rd column
+        ivw_beta <- as.numeric(splitted[3])
         ivw_se   <- as.numeric(splitted[4])
         ivw_pval <- as.numeric(splitted[5])
         parsed_line <- TRUE
@@ -261,7 +261,7 @@ for (folder in folders) {
   }
   
   # Parse MR-PRESSO p-value
-  mr_presso_val <- NA_character_  # Force character from the start
+  mr_presso_val <- NA_character_
   
   if (file.exists(presso_file)) {
     # parse numeric p-value
@@ -270,13 +270,13 @@ for (folder in folders) {
     if (length(pval_header_idx) > 0) {
       target_idx <- pval_header_idx[length(pval_header_idx)] + 1
       if (target_idx <= length(presso_lines)) {
-        line_val <- presso_lines[target_idx]            # e.g. "[1] 0.953"
-        line_val <- gsub("^\\[\\d+\\]\\s+", "", line_val) # remove "[1] "
+        line_val <- presso_lines[target_idx]
+        line_val <- gsub("^\\[\\d+\\]\\s+", "", line_val)
         numeric_val <- as.numeric(line_val)
         
         # Convert numeric to character
         if (!is.na(numeric_val)) {
-          mr_presso_val <- as.character(numeric_val)  # e.g. "0.953"
+          mr_presso_val <- as.character(numeric_val)
         }
       }
     }
