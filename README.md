@@ -44,7 +44,7 @@ Ensure that `plink` is available on your system path if you plan to run the PRS 
 
 ### Usage
 
-#### 1. Summary stats foramting
+#### Summary stats foramting
 
 ```bash
 python scripts/format_gwas.py \
@@ -70,7 +70,7 @@ plink --bfile PD_genotype/PD \
       --out PD_sup_results/PD.QC
 ```
 
-#### MR analisys
+#### MR Analysis
 ```bash
 source("network_MR_script.R")
 Rscript scripts/network_MR_script.R
