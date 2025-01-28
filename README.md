@@ -72,6 +72,6 @@ plink --bfile PD_genotype/PD \
 
 #### MR Analysis
 ```bash
-source("network_MR_script.R")
+source("scripts/network_MR_script.R")
 Rscript scripts/network_MR_script.R
 ```
