@@ -46,11 +46,6 @@ Ensure that `plink` is available on your system path if you plan to run the PRS 
 
 #### 1. Summary stats foramting
 
-**File:** `format_gwas.py`  
-**Description:** Converts an input GWAS file (tab-delimited) into a standardized format with columns:
-
-
-
 ```bash
 python scripts/format_gwas.py \
   --input <input_gwas_file.tsv> \
@@ -66,7 +61,6 @@ In this step, you will run PLINK to:
 3. Exclude variants failing the Hardy-Weinberg equilibrium threshold of `1e-6` (`--hwe 1e-6 midp`).
 4. Generate a clean PLINK dataset in binary format (`.bed/.bim/.fam`).
 
-**Command:**
 ```bash
 plink --bfile PD_genotype/PD \
       --maf 0.01 \
