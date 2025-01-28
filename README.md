@@ -50,7 +50,7 @@ Ensure that `plink` is available on your system path if you plan to run the PRS 
 python scripts/format_gwas.py \
   --input <input_gwas_file.tsv> \
   --output <formatted_output_file.tsv> \
-  --N <Sample Size
+  --N <Sample Size>
 ```
 #### PRS Analysis
 
