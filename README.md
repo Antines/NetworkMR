@@ -128,8 +128,6 @@ This script loops over each nutrient file in the nutrient directory, performs ha
 
 ---
 
----
-
 ## Acknowledgments
 
 - The original LCV methodology and code are derived from the [LCV GitHub repository](https://github.com/lukejoconnor/LCV).
