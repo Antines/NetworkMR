@@ -8,7 +8,7 @@
 # 1. Paths & Parameters
 # -----------------------------------------------------------------------------
 GENO_PREFIX="PD_genotype/PD" 
-NUTRIENTS_DIR="nutrients"
+NUTRIENTS_DIR="nutrients_data"
 RESULTS_DIR="PD_sup_results"
 
 # Clumping thresholds
